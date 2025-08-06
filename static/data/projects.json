@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Holidaze",
+        "description": "A modern booking platform built with React and styled-components. Features user authentication, property listings, and booking management.",
+        "desktopImage": "/assets/projects/holidaze/holidaze_front.png",
+        "mobileImage": "/assets/projects/holidaze/holidaze_front_mobile.png",
+        "projectLogo": "/assets/projects/holidaze/Holidaze-logo-without-slogan.png",
+        "githubUrl": "https://github.com/ohjenssen/holidaze",
+        "liveUrl": "https://holidaze-ohj.netlify.app",
+        "technoloiges": ["React", "SASS", "REST API"],
+        "featured": true
+    },
+    {
+    "id": 1,
+    "title": "Holidaze 2.0",
+    "description": "A modern booking platform built with React and styled-components. Features user authentication, property listings, and booking management.",
+    "desktopImage": "/assets/projects/holidaze/holidaze_front.png",
+    "mobileImage": "/assets/projects/holidaze/holidaze_front_mobile.png",
+    "projectLogo": "/assets/projects/holidaze/Holidaze-logo-without-slogan.png",
+    "githubUrl": "https://github.com/ohjenssen/holidaze",
+    "liveUrl": "https://holidaze-ohj.netlify.app",
+    "technoloiges": ["React", "SASS", "REST API"],
+    "featured": true
+    }
+]

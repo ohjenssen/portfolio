@@ -1,18 +1,33 @@
-<script>
-    import portraitPath from '$lib/assets/oskar_portrett_path.svg'
-    import portrait from '$lib/assets/oskar_portrett.png';
-    import defaultProjectImageDesktop from '$lib/assets/projects/holidaze/holidaze_front.png';
-    import defaultProjectImageMobile from '$lib/assets/projects/holidaze/holidaze_front_mobile.png';
-    import sectionPath from '$lib/assets/sectionPath.svg';
-    import logo from '$lib/assets/oskarLogo_black.png';
-    import githubIcon from '$lib/assets/icons/github.svg';
-    import footerTop from '$lib/assets/footer_top.svg';
-    import linkedInIcon from '$lib/assets/icons/linkedin.svg';
+<script lang="ts">
+    import { onMount } from 'svelte';
+    import type { Project } from '$lib';
+
+    const portraitPath = '/assets/oskar_portrett_path.svg';
+    const portrait = '/assets/oskar_portrett.png';
+    const sectionPath = '/assets/sectionPath.svg';
+    const logo = '/assets/oskarLogo_black.png';
+    const githubIcon = '/assets/icons/github.svg';
+    const footerTop = '/assets/footer_top.svg';
+    const linkedInIcon = '/assets/icons/linkedin.svg';
+
 
     let isActive = $state(false);
+    let projects = $state<Project[]>([]);
+
 	function handleNav() {
 		isActive = !isActive;
 	}
+
+    onMount(async () => {
+        try {
+            const response = await fetch('/data/projects.json');
+            projects = await response.json();
+            console.log(projects);
+
+        } catch (error) {
+            console.error('Failed to load projects: ', error)
+        }
+    })
 </script>
 
 <svelte:head>
@@ -65,40 +80,46 @@
         <div class="section-seperation">
             <img src="{sectionPath}" class="section-seperation-path" alt="Section path">
         </div>
+
         <section id="projects" class="mt-4">
             <h2>Projects</h2>
             <div class="projectSlider">
                         <div class="singleProject">
                             <div class="singleProjectImgContainer">
-                                <img class="singleProjectImg" src="">
+                                {#each projects as project}
+                                    <img class="singleProjectImg" src={project.projectLogo} alt={project.title}>
+                                    <p>{project.title}</p>
+                                {/each}
                             </div>
                         </div>
 
             </div>
 
+            {#each projects as project}
             <div class="projectContainer">
-                <h2 class="projectTitle">Holidaze</h2>
+                <h2 class="projectTitle">{project.title}</h2>
                 <div class="projectContainerImages">
                     <div class="projectImageDesktopContainer">
-                        <img class="projectImageDesktop" src="{defaultProjectImageDesktop}" alt="Project display for desktop">
+                        <img class="projectImageDesktop" src={project.desktopImage} alt="Project display for desktop">
                     </div>
                     <div class="projectImageMobileContainer">
-                        <img class="projectImageMobile" src="{defaultProjectImageMobile}" alt="Project display for mobile">
+                        <img class="projectImageMobile" src={project.mobileImage} alt="Project display for mobile">
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut purus commodo, ultrices erat nec, dictum justo. Phasellus quis nulla pharetra, convallis libero et, iaculis arcu. Duis tempor dolor et purus venenatis, id euismod dolor tempor. Praesent in est et massa interdum tincidunt ac eget nisl.</p>
+                <p>{project.description}</p>
                 <div class="projectBtnContainer">
-                    <button class="customBtn"><img src="{githubIcon}" alt="Github icon" class="github">Github</button>
+                    <button class="customBtn"><img src={githubIcon} alt="Github icon" class="github">Github</button>
                     <button class="customBtn">Go to page</button>
                 </div>
             </div>
+            {/each}
         </section>
         
     </main>
 
    <footer>
         <div class="footer-top">
-            <img src="{footerTop}" class="footerImg" alt="Footer path">
+            <img src={footerTop} class="footerImg" alt="Footer path">
         </div>
         <div class="footer-body">
             <h2>Currently based in Copenhagen</h2>
@@ -437,6 +458,7 @@ p, h1, h2, h3, a {
     padding: 0px 16px;
     display: flex;
     overflow: scroll;
+    background-color: white;
 
     .singleProject {
         .singleProjectImgContainer {

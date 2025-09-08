@@ -87,7 +87,7 @@
         display: block;
         width: 100%;
         height: 3px;
-        background-color: var(--customBlack);
+        background-color: var(--bananaYellow);
         margin: 6px 0px;
         transition: 0.4s;
         border-radius: 2px 2px 2px 2px;

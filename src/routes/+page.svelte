@@ -1,13 +1,11 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import type { Project } from '$lib';
-    import emblaCarouselSvelte from 'embla-carousel-svelte';
-    import type { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel';
-    import { addThumbBtnsClickHandlers, addToggleThumbBtnsActive } from '$lib/emblaCarouselThumbsButton';
     import Carousel from '$lib/components/Carousel.svelte';
     import Header from '$lib/components/Header.svelte';
     import Hero from '$lib/components/Hero.svelte';
     import Footer from '$lib/components/Footer.svelte';
+    import Typewriter from '$lib/components/Typewriter.svelte';
 
     const sectionPath = '/assets/sectionPath.svg';
     const githubIcon = '/assets/icons/github.svg';
@@ -37,6 +35,7 @@
     <Header />
 
     <main>
+        <Typewriter />
         <Hero />
         <div class="section-seperation">
             <img src="{sectionPath}" class="section-seperation-path" alt="Section path">

@@ -4,9 +4,9 @@
     let featureText: HTMLSpanElement | null = null;
 
     const carouselList = [
-        { text: "Developer", color: "#ff0000" },
-        { text: "Designer", color: "#ff0000" },
-        { text: "Multimediadesigner", color: "#ff0000" },
+        { text: "Developer", color: "#0589e2" },
+        { text: "Designer", color: "#00ffaa" },
+        { text: "Multimediadesigner", color: "#e86ffd" },
         { text: "Oskar", color: "#ff0000" },
     ];
 
@@ -64,7 +64,7 @@
         margin-top: 64px;
         display: flex;
         justify-content: center;
-        height: 90vh;
+        height: 80vh;
     }
 
     .container {

@@ -7,7 +7,6 @@
     import Footer from '$lib/components/Footer.svelte';
     import Typewriter from '$lib/components/Typewriter.svelte';
 
-    const sectionPath = '/assets/sectionPath.svg';
     const githubIcon = '/assets/icons/github.svg';
     const linkedInIcon = '/assets/icons/linkedin.svg';
 
@@ -37,9 +36,6 @@
     <main>
         <Typewriter />
         <Hero />
-        <div class="section-seperation">
-            <img src="{sectionPath}" class="section-seperation-path" alt="Section path">
-        </div>
 
         <section id="projects" class="mt-4">
             <h2>Projects</h2>

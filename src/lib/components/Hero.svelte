@@ -1,5 +1,6 @@
 <script>
-    const portraitPath = '/assets/oskar_portrett_path.svg';
+    const portraitPath1 = '/assets/portrait_path_vector_1.svg';
+    const portraitPath2 = '/assets/portrait_path_vector_2.svg';
     const portrait = '/assets/oskar_portrett.png';
 </script>
 
@@ -15,7 +16,8 @@
                 </div>
                 <div class="portrait-image-container">
                     <img src="{portrait}" class="portrait" alt="Portrettbilde av Oskar">
-                    <img src="{portraitPath}" class="portrait-path" alt="graphics">
+                    <img src="{portraitPath1}" class="portrait-path" id="path1" alt="graphics">
+                    <img src="{portraitPath2}" class="portrait-path" id="path2" alt="graphics">
                 </div>
             </div>
 
@@ -67,6 +69,40 @@
             left: 10px;
             top: 10px;
         }
+        #path1 {
+            animation: rotate-clockwise-animation 25s infinite linear;
+        }
+
+        #path2 {
+            animation: rotate-anti-clockwise-animation 25s infinite linear;
+            width: 300px;
+            00px;
+            left: 30px;
+        }
+    }
+
+    @keyframes rotate-clockwise-animation {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+	    100% {
+		    transform: rotate(360deg);
+	    }
+    }
+
+    @keyframes rotate-anti-clockwise-animation {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(-180deg);
+        }
+	    100% {
+		    transform: rotate(-360deg);
+	    }
     }
 
 @media(min-width: 768px){
@@ -78,9 +114,18 @@
     }
 
     .portrait-image-container {
-        .portrait, .portrait-path { 
+        .portrait { 
             margin-top: 0px;
             width: 350px;
+        }
+
+        .portrait-path {
+            width: 350px;
+        }
+
+        #path2 {
+            width: 300px;
+            left: 30px;
         }
 
     }

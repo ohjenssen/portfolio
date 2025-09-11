@@ -27,7 +27,7 @@
             align-items: center;
             flex-wrap: wrap;
             border-bottom: 1px solid gray;
-            padding: 16px;
+            padding: 16px 16px 0px 16px ;
         }
     }
 

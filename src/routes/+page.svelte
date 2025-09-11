@@ -6,6 +6,7 @@
     import Hero from '$lib/components/Hero.svelte';
     import Footer from '$lib/components/Footer.svelte';
     import Typewriter from '$lib/components/Typewriter.svelte';
+    import MeSection from '$lib/components/MeSection.svelte';
 
     const githubIcon = '/assets/icons/github.svg';
     const linkedInIcon = '/assets/icons/linkedin.svg';
@@ -35,7 +36,8 @@
 
     <main>
         <Typewriter />
-        <Hero />
+        <MeSection />
+        <!-- <Hero /> -->
 
         <section id="projects" class="mt-4">
             <h2>Projects</h2>

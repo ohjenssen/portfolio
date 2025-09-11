@@ -21,6 +21,7 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
+		"embla-carousel-fade": "^8.6.0",
 		"embla-carousel-svelte": "^8.6.0"
 	}
 }

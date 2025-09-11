@@ -1,27 +1,27 @@
 [
     {
-        "id": 1,
-        "title": "Holidaze",
-        "description": "A modern booking platform built with React and styled-components. Features user authentication, property listings, and booking management.",
-        "desktopImage": "/assets/projects/holidaze/holidaze_front.png",
-        "mobileImage": "/assets/projects/holidaze/holidaze_front_mobile.png",
-        "projectLogo": "/assets/projects/holidaze/Holidaze-logo-without-slogan.png",
-        "githubUrl": "https://github.com/ohjenssen/holidaze",
-        "liveUrl": "https://holidaze-ohj.netlify.app",
-        "technoloiges": ["React", "SASS", "REST API"],
-        "featured": true
-    },
-
-    {
         "id": 2,
         "title": "Bolan",
         "description": "My final project at the Multimediadesign education. Here we chose an existing company and created a redesign of their visual identity.",
         "desktopImage": "/assets/projects/bolan/bolan.png",
         "mobileImage": "/assets/projects/bolan/bolan_mobile.png",
         "projectLogo": "assets/projects/bolan/bolan_logo.png",
-        "githubUrl": "bolan.netlify.app",
-        "liveUrl": "bolan.netlify.app",
+        "githubUrl": "https://bolan.netlify.app",
+        "liveUrl": "https://bolan.netlify.app",
         "technologies": ["HTML, CSS, JavaScript"],
         "featured": true 
+    },
+
+    {
+        "id": 1,
+        "title": "Holidaze",
+        "description": "A modern booking platform built with React and styled-components. Features user authentication, property listings, and booking management.",
+        "desktopImage": "/assets/projects/holidaze/holidaze_front.png",
+        "mobileImage": "/assets/projects/holidaze/holidaze_front_mobile.png",
+        "projectLogo": "/assets/projects/holidaze/Holidaze-logo-without-slogan.png",
+        "githubUrl": "",
+        "liveUrl": "",
+        "technologies": ["React", "SASS", "REST API"],
+        "featured": true
     }
 ]

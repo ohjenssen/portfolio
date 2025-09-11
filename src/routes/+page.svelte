@@ -57,6 +57,7 @@
         --customBlack: #1a1b1d;
         --coolOrange: #DE935E;
         --bananaYellow: #FFCE21;
+        --bananaYellowHover: #ffe586;
         --wineRed: #CC6666;
         --limeGreen: #B5BD68;
     }

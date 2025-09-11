@@ -37,20 +37,32 @@
                 <div class="embla__slide">
 
 
-                    <div class="projectContainer">
-                        <h2 class="projectTitle">{project.title}</h2>
-                        <div class="projectContainerImages">
-                            <div class="projectImageDesktopContainer">
-                                <img class="projectImageDesktop" src={project.desktopImage} alt="Project display for desktop">
+                    <div class="project-container">
+                        <h2>{project.title}</h2>
+                        <div class="project-info">
+                            <div class="image-container">
+                                <img class="desktop-image" src={project.desktopImage} alt={project.title}/>
                             </div>
-                            <div class="projectImageMobileContainer">
-                                <img class="projectImageMobile" src={project.mobileImage} alt="Project display for mobile">
+                            <div class="project-details">
+                                <div class="technologies">
+                                    <p>Made with: </p>
+                                    {#each project.technologies as technology}
+                                        <p class="technology">{technology}</p>
+                                    {/each}
+                                </div>
+                                <p>{project.description}</p>
+                                <div class="button-container">
+                                    {#if project.githubUrl}
+                                        <a class="button" href={project.githubUrl}>
+                                            <img src={githubIcon} alt="githubIcion">
+                                            Github
+                                        </a>
+                                    {/if}
+                                    {#if project.liveUrl}
+                                        <a class="button" href={project.liveUrl}>Livepage</a>
+                                    {/if}
+                                </div>
                             </div>
-                        </div>
-                        <p>{project.description}</p>
-                        <div class="projectBtnContainer">
-                            <a class="customBtn"><img src={githubIcon} alt="Github icon" class="github">Github</a>
-                            <a class="customBtn">Go to page</a>
                         </div>
                     </div>
 
@@ -62,6 +74,11 @@
 </div>
 
 <style lang='postcss'>
+    p, h2, h3, a {
+        color: white;
+        font-family: 'source-code-pro';
+    }
+
     .embla-container {
         display: flex;
         justify-content: center;
@@ -69,6 +86,7 @@
 
     .embla {    
         overflow: hidden;  
+        width: 100%;
     }  
     
     .embla__container {    
@@ -79,108 +97,88 @@
     .embla__slide {    
         flex: 0 0 100%;    
         min-width: 0;  
+        display: flex;
+        justify-content: center;
     }
 
-    .customBtn {
-        color: var(--customBlack);
-        background-color: var(--bananaYellow);
-        padding: 10px 50px 10px 50px;
-        border: none;
-        /* margin-top: 16px; */
-        border-radius: 10px;
-        .github {
-            margin-right: 5px;
-            width: 14px;
-        }
-    }
-
-
-    .customBtn:hover {
-        background-color: #4F57AA;
-        border-radius: 0px;
-        transition: 0.5s;
-    }
-
-    .projectContainer {
-        margin-top: 32px;
-
-        .projectContainerImages {
-            display: flex; 
-            flex-direction: column;
-            margin-bottom: 16px;
-            align-items: center;
-            justify-content: space-between;
-
-            .projectImageDesktopContainer {
-                height: 300px;
-
-                .projectImageDesktop {
-                    /* width: 100%; */
-                    height: 100%;
-                    object-fit: contain;
-                    border-radius: 20px;
-                }
-            }
-
-            .projectImageMobileContainer {
-                margin-top: 16px;
-                display: flex; 
-                flex-direction: column;
-                align-items: center;
-                /* max-width: 300px;*/
-                height: 300px;
-
-                .projectImageMobile {
-                    /* width: 50%; */
-                    height: 100%;
-                    object-fit: contain;
-                    border-radius: 20px;
-                }
-            }
+    .project-container{
+        h2 {
+            color: var(--wineRed)
         }
 
-        .projectTitle {
-            margin-top: 16px;
-            color: white;
-        }
-
-        .projectBtnContainer {
+        .project-info {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-        }
 
-        p {
-            color: white;
-        }
-    }
+            .project-details {
+                width: 350px;
 
-    @media(min-width: 500px){ 
-        .projectContainerImages {
-            flex-direction: row !important;
+                .technologies {
+                    display: flex;
+                    flex-wrap: wrap;
 
-            .projectImageDesktopContainer { 
-                margin-right: 8px;
-            }
+                    .technology {
+                        margin-left: 10px;
+                        color: var(--coolOrange)
+                    }
+                }
 
-            .projectImageMobileContainer {
-                margin-left: 8px;
-                margin-top: 0px !important;
+                .button-container {
+                    .button {
+                        display: inline-block;
+                        text-align: center;
+                        background-color: var(--bananaYellow);
+                        padding: 8px 16px;
+                        width: 100px;
+                        color: black;
+                        text-decoration: none;
+                        border-radius: 16px;
 
-                .projectImageMobile {
-                    width: 100% !important;
+                        &:hover {
+                            background-color: var(--bananaYellowHover);
+                            transition: 0.3s;
+                        }
+                    }
                 }
             }
 
-        }
+            .image-container {
+                width: 350px;
 
-        .projectBtnContainer {
-            display: block !important;
-        }
-
-        .projectBtnContainer {
-            display: block !important;
+                .desktop-image {
+                    width: 100%;
+                }
+            }
         }
     }
+
+    @media(min-width: 700px){
+
+        .project-container {
+            width: 100%;
+
+            .project-info {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .project-details {
+                    padding: 0px 16px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .image-container {
+                    min-width: 500px;
+                    padding: 0px 16px;
+                    /* width: 500px; */
+                }
+            }
+        }
+    }
+
+
 
 </style>

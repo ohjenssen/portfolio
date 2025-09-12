@@ -60,7 +60,6 @@
 
 <style lang="postcss">
     section {
-        margin-top: 64px;
         display: flex;
         justify-content: center;
         height: 100vh;

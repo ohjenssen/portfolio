@@ -34,9 +34,8 @@
     <main>
         <Typewriter />
         <MeSection />
-        <!-- <Hero /> -->
 
-        <section id="projects" class="mt-4">
+        <section id="projects">
             <h2>Projects</h2>
             <Carousel {projects} />
 
@@ -81,44 +80,9 @@
         font-family: 'source-code-pro';
     }
 
-/* -------------------------------------------------------------------------------- */
-
-    .contact-icons-container {
-        display: flex;
-        align-items: center;
-        width: 300px;
-        font-size: 18px;
-
-        p {
-            padding: 0;
-            margin: 0;
-        }
-
-        .contact-icons {
-            display: flex;
-            align-items: center;
-            margin-right: 15px;
-        }
-
-        .custom-link {
-            color: var(--bananaYellow);
-        }
-    } 
-
-/* ---------------------- Seksjon separasjon --------------------------------- */
-
-    .section-seperation {
-        width: 100%;
-        
-        .section-seperation-path {
-            width: 100%;
-        }
-    }
-
     #projects {
-        margin: 16px;
+        padding: var(--paddingSmall);
     }
-
 
 /* --------------------------------- SLIDER -------------------------------------------- */
     .projectSlider {
@@ -154,26 +118,19 @@
 
 /* ------------------------------- Footer --------------------------------- */
 
-    @media(min-width: 768px){
-        .navigation-link {
-            font-size: 16px;
-        }
-
+    @media(min-width: 700px){
         #projects {
-            margin: 32px;
+            padding: var(--paddingMedium);
         }
 
     }
 
-    @media(min-width: 1000px){
+    @media(min-width: 900px){
 
-        .contact-icons-container {
-            font-size: 24px;
-        }
 
         #projects {
-            margin: 64px;
+            padding: var(--paddingXL);
         }
-
     }
+
 </style>

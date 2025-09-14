@@ -82,6 +82,7 @@
     .embla-container {
         display: flex;
         justify-content: center;
+        padding: var(--paddingSmall);
     }
 
     .embla {    
@@ -154,6 +155,10 @@
 
     @media(min-width: 700px){
 
+        .embla-container {
+            padding: 0px;
+        }
+
         .project-container {
             width: 100%;
 
@@ -172,8 +177,12 @@
 
                 .image-container {
                     min-width: 500px;
-                    padding: 0px 16px;
-                    /* width: 500px; */
+
+
+                    img {
+                        min-width: 350px;
+                        max-wixdth: 700px;
+                    }
                 }
             }
         }

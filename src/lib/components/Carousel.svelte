@@ -37,34 +37,31 @@
                 <div class="embla__slide">
 
 
-                    <div class="project-container">
-                        <h2>{project.title}</h2>
-                        <div class="project-info">
-                            <div class="image-container">
-                                <img class="desktop-image" src={project.desktopImage} alt={project.title}/>
-                            </div>
-                            <div class="project-details">
-                                <div class="technologies">
-                                    <p>Made with: </p>
+                    <section class="image-text-section">
+                        <div class="image-wrapper">
+                            <img src={project.desktopImage} alt={project.title} />
+                        </div>
+                        <div class="text-wrapper">
+                             <div class="technologies">
+                                    <p class="made-with">Made with: </p>
                                     {#each project.technologies as technology}
                                         <p class="technology">{technology}</p>
                                     {/each}
-                                </div>
-                                <p>{project.description}</p>
-                                <div class="button-container">
-                                    {#if project.githubUrl}
-                                        <a class="button" href={project.githubUrl}>
-                                            <img src={githubIcon} alt="githubIcion">
-                                            Github
-                                        </a>
-                                    {/if}
-                                    {#if project.liveUrl}
-                                        <a class="button" href={project.liveUrl}>Livepage</a>
-                                    {/if}
-                                </div>
+                            </div>
+                            <p>{project.description}</p>
+                            <div class="button-container">
+                                {#if project.githubUrl}
+                                    <a class="button" href={project.githubUrl}>
+                                        <img src={githubIcon} alt="githubIcion">
+                                        Github
+                                    </a>
+                                {/if}
+                                {#if project.liveUrl}
+                                    <a class="button" href={project.liveUrl}>Livepage</a>
+                                {/if}
                             </div>
                         </div>
-                    </div>
+                    </section>
 
 
                 </div>    
@@ -82,7 +79,7 @@
     .embla-container {
         display: flex;
         justify-content: center;
-        padding: var(--paddingSmall);
+        padding: 0px;
     }
 
     .embla {    
@@ -102,92 +99,101 @@
         justify-content: center;
     }
 
-    .project-container{
-        h2 {
-            color: var(--wineRed)
+    .image-text-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 32px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0px 0px;
+    }
+
+    .image-wrapper,
+    .text-wrapper {
+        flex: 1 1 300px;
+        min-width: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-wrapper {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        max-width: 100%;
+        min-width: 300px;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .text-wrapper {
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    .technologies {
+        display: flex;
+        flex-wrap: wrap;
+
+        p {
+            margin: 0px;
         }
 
-        .project-info {
-            display: flex;
+        .made-with {
+            padding: 0px var(--paddingSmall) 0px 0px;
+            margin: 0px;
+        }
+
+        .technology {
+            color: var(--coolOrange)
+        }
+    }
+
+    .button-container {
+        .button {
+            display: inline-block;
+            text-align: center;
+            background-color: var(--bananaYellow);
+            padding: 8px 16px;
+            width: 85px;
+            color: black;
+            text-decoration: none;
+            border-radius: 16px;
+
+            &:hover {
+                background-color: var(--bananaYellowHover);
+                transition: 0.3s;
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        .image-text-section {
             flex-direction: column;
-
-            .project-details {
-                width: 350px;
-
-                .technologies {
-                    display: flex;
-                    flex-wrap: wrap;
-
-                    .technology {
-                        margin-left: 10px;
-                        color: var(--coolOrange)
-                    }
-                }
-
-                .button-container {
-                    .button {
-                        display: inline-block;
-                        text-align: center;
-                        background-color: var(--bananaYellow);
-                        padding: 8px 16px;
-                        width: 100px;
-                        color: black;
-                        text-decoration: none;
-                        border-radius: 16px;
-
-                        &:hover {
-                            background-color: var(--bananaYellowHover);
-                            transition: 0.3s;
-                        }
-                    }
-                }
-            }
-
-            .image-container {
-                width: 350px;
-
-                .desktop-image {
-                    width: 100%;
-                }
-            }
+            gap: 24px;
+            padding: 16px 0;
         }
-    }
-
-    @media(min-width: 700px){
-
-        .embla-container {
-            padding: 0px;
-        }
-
-        .project-container {
+        .image-wrapper,
+        .text-wrapper {
+            min-width: 0;
             width: 100%;
-
-            .project-info {
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-
-                .project-details {
-                    padding: 0px 16px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                }
-
-                .image-container {
-                    min-width: 500px;
-
-
-                    img {
-                        min-width: 350px;
-                        max-wixdth: 700px;
-                    }
-                }
-            }
+            justify-content: center;
+            /* align-items: center; */
+        }
+        .image-wrapper img {
+            min-width: 0;
+            width: 100%;
+            max-width: 100%;
         }
     }
-
-
 
 </style>

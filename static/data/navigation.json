@@ -2,8 +2,10 @@
     {
         "id": 1,
         "items": [
-            {"text": "Projects", "url": "#projects", "icon": "/"},
-            {"text": "Skills", "url": "#skills", "icon": "/"}
+            {"text": "Projects", "url": "#projects", "icon": ""},
+            {"text": "Skills", "url": "#skills", "icon": ""},
+            {"text": "Github", "url": "https://github.com/ohjenssen", "icon": "/assets/icons/github.svg"},
+            { "text": "LinkedIn", "url": "https://www.linkedin.com/in/oskar-heming-jenssen/", "icon": "assets/icons/linkedin.svg"}
         ]
     }
 ]

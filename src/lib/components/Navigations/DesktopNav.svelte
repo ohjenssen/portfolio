@@ -1,14 +1,26 @@
 <script lang="ts">
     const logo = '/assets/oskar_logo_yellow.svg';   
     let { navigation } = $props();
+    if(navigation){
+        for (let i = 0; i < navigation.items.length; i++){
+            console.log(navigation.items[i]);
+            if(navigation.items[i].icon){
+                console.log(navigation.items[i].icon);
+            }
+        }
+    }
+    
 </script>
-
 <div class="nav-container">
     <a href="#"><img class="oskar-logo" src="{logo}" alt="Oskars portfolio logo"></a>
     {#if navigation}
         <nav class="desktop-nav">
-            {#each navigation.items as navItems}
-                <a class="navigation-link" href="{navItems.url}">{navItems.text}</a>
+            {#each navigation.items as navItem}
+                {#if navItem.icon}
+                    <a class="navigation-link icon" href="{navItem.url}" aria-label="link"><img alt="{navItem.text}" src={navItem.icon}></a>
+                {:else}
+                    <a class="navigation-link" href="{navItem.url}">{navItem.text}</a>
+                {/if}
             {/each}
         </nav>
     {/if}
@@ -49,6 +61,15 @@
 
     .navigation-link:hover {
         color: red;
+    }
+
+    .icon {
+        background-color: var(--bananaYellow);
+        padding: 0px 4px;
+        border-radius: 10%;
+        img {
+            vertical-align: middle;
+        }
     }
 
     @media(min-width: 700px){

@@ -10,7 +10,6 @@
         const res = await fetch('/data/navigation.json');
         const data = await res.json();
         navigation = data[0];
-        console.log('Header: ', navigation);
     })
 </script>
 

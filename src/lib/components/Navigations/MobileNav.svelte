@@ -6,7 +6,6 @@
     }
 
     let { navigation } = $props();
-    console.log('MobileNavn: ', navigation)
 </script>
 
 <header>
@@ -28,9 +27,19 @@
     </div>
         {#if navigation}
             <div class="mobile-nav" class:is-active={isActive}>
-                {#each navigation.items as navItems}
-                    <a href={navItems.url} onclick={handleState}>{navItems.text}</a>
+                {#each navigation.items as navItem}
+                    {#if !navItem.icon}
+                        <a class="navigation-link" href={navItem.url} onclick={handleState}>{navItem.text}</a>
+                    {/if}
                 {/each}
+
+                <div class="icon-links-container">
+                    {#each navigation.items as navItem}
+                        {#if navItem.icon}
+                                    <a class="icon" href="{navItem.url}" aria-label="link"><img alt="{navItem.text}" src={navItem.icon}></a>
+                        {/if}
+                    {/each}
+                </div>
             </div>
         {/if}
 </header>
@@ -132,7 +141,7 @@
         left: 0;
     }
 
-    .mobile-nav a {
+    .navigation-link {
         display: block;
         width: 100%;
         max-width: 200px;
@@ -145,7 +154,23 @@
         text-decoration: none;
         font-weight: bold;
         box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
-        
+    }
+
+    .icon-links-container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 230px;
+        margin-top: 32px;
+
+        .icon {
+            background-color: var(--bananaYellow);
+            padding: 4px;
+            border-radius: 10%;
+            img {
+                width: 30px;
+                vertical-align: middle;
+            }
+        }
     }
 
     @media(min-width: 700px){

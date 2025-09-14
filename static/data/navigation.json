@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "items": [
+            {"text": "Projects", "url": "#projects", "icon": "/"},
+            {"text": "Skills", "url": "#skills", "icon": "/"}
+        ]
+    }
+]

@@ -3,13 +3,10 @@
     import type { Project } from '$lib';
     import Carousel from '$lib/components/Carousel.svelte';
     import Header from '$lib/components/Header.svelte';
-    import Hero from '$lib/components/Hero.svelte';
     import Footer from '$lib/components/Footer.svelte';
     import Typewriter from '$lib/components/Typewriter.svelte';
     import MeSection from '$lib/components/MeSection.svelte';
 
-    const githubIcon = '/assets/icons/github.svg';
-    const linkedInIcon = '/assets/icons/linkedin.svg';
 
     let projects = $state<Project[]>([]);
 
@@ -60,6 +57,11 @@
         --bananaYellowHover: #ffe586;
         --wineRed: #CC6666;
         --limeGreen: #B5BD68;
+        --maxWidth: 1100px;
+        --paddingXL: 128px;
+        --paddingMedium: 64px;
+        --paddingMediumSmall: 24px;
+        --paddingSmall: 16px;
     }
 
 /* ----------------------- */

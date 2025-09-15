@@ -129,6 +129,7 @@
         width: 80%;
         border-radius: 8px;
         display: block;
+        align-items: center;
     }
 
     p, h2, h3, a {
@@ -164,7 +165,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: stretch;
-        gap: 32px;
+        /* gap: 32px; */
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
@@ -240,7 +241,7 @@
     @media (max-width: 800px) {
         .image-text-section {
             flex-direction: column;
-            gap: 24px;
+            gap: 0px;
             padding: 16px 0;
         }
         .image-wrapper,
@@ -248,7 +249,6 @@
             min-width: 0;
             width: 100%;
             justify-content: center;
-            /* align-items: center; */
         }
 
         .text-wrapper { 

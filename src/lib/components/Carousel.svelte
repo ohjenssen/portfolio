@@ -7,6 +7,8 @@
     interface Props {
         projects: Project[];
     }
+
+    let emblaApiThumb: EmblaCarouselType | undefined;
     
     let { projects }: Props = $props();
     const githubIcon = '/assets/icons/github.svg';
@@ -29,6 +31,27 @@
         }
     });
 </script>
+
+<div class="embla-thumbs">
+    <div
+        class="embla-thumbs__viewport"
+        use:emblaCarouselSvelte={{ options: { containScroll: 'keepSnaps', dragFree: true }, plugins: [] }}
+        onemblaInit={e => emblaApiThumb = e.detail}
+    >
+        <div class="embla-thumbs__container">
+            {#each projects as project, idx}
+                <button
+                    class="embla-thumbs__slide {emblaApiMain && emblaApiMain.selectedScrollSnap() === idx ? 'is-selected' : ''}"
+                    type="button"
+                    onclick={() => emblaApiMain && emblaApiMain.scrollTo(idx)}
+                >
+                    <img src={project.projectLogo} alt={project.title} />
+                </button>
+            {/each}
+        </div>
+    </div>
+</div>
+
 
 <div class="embla-container">
     <div class="embla" use:emblaCarouselSvelte="{{ options, plugins }}" onemblaInit="{onMainCarouselInit}">
@@ -72,6 +95,38 @@
 </div>
 
 <style lang='postcss'>
+    .embla-thumbs {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+    }
+    .embla-thumbs__viewport {
+        overflow: hidden;
+        width: 100%;
+    }
+    .embla-thumbs__container {
+        display: flex;
+        gap: 12px;
+    }
+    .embla-thumbs__slide {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        border-radius: 8px;
+        outline: 2px solid transparent;
+        transition: outline-color 0.2s;
+        background-color: gray;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .embla-thumbs__slide img {
+        width: 80%;
+        border-radius: 8px;
+        display: block;
+    }
+
     p, h2, h3, a {
         color: white;
         font-family: 'source-code-pro';
@@ -85,7 +140,7 @@
 
     .embla {    
         overflow: hidden;  
-        width: 100%;
+        /* width: 100%; */
     }  
     
     .embla__container {    

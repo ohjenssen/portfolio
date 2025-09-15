@@ -1,6 +1,6 @@
 [
     {
-        "id": 2,
+        "id": 1,
         "title": "Bolan",
         "description": "My final project at the Multimediadesign education. Here we chose an existing company and created a redesign of their visual identity.",
         "desktopImage": "/assets/projects/bolan/bolan.png",
@@ -11,9 +11,8 @@
         "technologies": ["HTML, CSS, JavaScript"],
         "featured": true 
     },
-
     {
-        "id": 1,
+        "id": 2,
         "title": "Holidaze",
         "description": "A modern booking platform built with React and styled-components. Features user authentication, property listings, and booking management.",
         "desktopImage": "/assets/projects/holidaze/holidaze_front.png",

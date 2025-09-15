@@ -123,13 +123,13 @@
         width: 100px;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .embla-thumbs__slide img {
         width: 80%;
         border-radius: 8px;
         display: block;
-        align-items: center;
     }
 
     p, h2, h3, a {

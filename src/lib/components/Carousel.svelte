@@ -141,6 +141,7 @@
         display: flex;
         justify-content: center;
         padding: 0px;
+        margin-top: 8px;
     }
 
     .embla {    
@@ -259,6 +260,12 @@
             min-width: 0;
             width: 100%;
             max-width: 100%;
+        }
+    }
+
+    @media (min-width: 800px){
+        .image-text-section {
+            gap: 24px;
         }
     }
 

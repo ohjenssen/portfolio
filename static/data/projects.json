@@ -8,7 +8,7 @@
         "projectLogo": "assets/projects/bolan/bolan_logo.png",
         "githubUrl": "https://bolan.netlify.app",
         "liveUrl": "https://bolan.netlify.app",
-        "technologies": ["HTML, CSS, JavaScript"],
+        "technologies": ["HTML", "CSS", "JavaScript"],
         "featured": true 
     },
     {
@@ -22,5 +22,17 @@
         "liveUrl": "",
         "technologies": ["React", "SASS", "REST API"],
         "featured": true
+    },
+    {
+        "id": 3,
+        "title": "GrantOne",
+        "description": "My internship was at Grant APS. During my time there, I got to work with their application GrantOne, where I partook in designing and developing new features.",
+        "desktopImage": "/assets/projects/grantOne/screenshot_grant.PNG",
+        "mobileImage": "",
+        "projectLogo": "/assets/projects/grantOne/grant_logo_2025.svg",
+        "githubUrl": "",
+        "liveUrl": "",
+        "technologies": ["Angular", "AngularMaterial"]
+
     }
 ]

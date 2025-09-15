@@ -100,14 +100,17 @@
         display: flex;
         justify-content: center;
     }
+
     .embla-thumbs__viewport {
         overflow: hidden;
         width: 100%;
     }
+
     .embla-thumbs__container {
         display: flex;
         gap: 12px;
     }
+
     .embla-thumbs__slide {
         border: none;
         background: none;
@@ -121,6 +124,7 @@
         display: flex;
         justify-content: center;
     }
+
     .embla-thumbs__slide img {
         width: 80%;
         border-radius: 8px;
@@ -202,6 +206,7 @@
 
         p {
             margin: 0px;
+            margin-right: 10px;
         }
 
         .made-with {

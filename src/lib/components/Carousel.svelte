@@ -42,6 +42,7 @@
                             <img src={project.desktopImage} alt={project.title} />
                         </div>
                         <div class="text-wrapper">
+                            <h2>{project.title}</h2>
                              <div class="technologies">
                                     <p class="made-with">Made with: </p>
                                     {#each project.technologies as technology}
@@ -189,6 +190,11 @@
             justify-content: center;
             /* align-items: center; */
         }
+
+        .text-wrapper { 
+            justify-content: start;
+        }
+
         .image-wrapper img {
             min-width: 0;
             width: 100%;

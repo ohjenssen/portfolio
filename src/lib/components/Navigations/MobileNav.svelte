@@ -63,7 +63,7 @@
         align-items: center;
         padding-left: var(--paddingSmall);
         .logo-container {
-            width: 100px;
+            width: 125px;
             .logo {
                 width: 100%;
             }
@@ -76,7 +76,7 @@
 
     .hamburger {
         display: block;
-        width: 50px;
+        width: 40px;
         cursor: pointer;
         appearance: none;
         background: none;

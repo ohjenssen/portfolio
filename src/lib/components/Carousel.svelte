@@ -11,12 +11,17 @@
     let emblaApiThumb: EmblaCarouselType | undefined;
     
     let { projects }: Props = $props();
+    let openAccordionIndex: number | null = $state(null);
     const githubIcon = '/assets/icons/github.svg';
 
     
     let emblaApiMain: EmblaCarouselType;
     const options: EmblaOptionsType = { loop: false };
     const plugins = [Fade()];
+
+    function handleAccordion(idx: number){
+        openAccordionIndex = openAccordionIndex === idx ? null: idx;
+    }
 
     function onMainCarouselInit(event: CustomEvent<EmblaCarouselType>) {
         emblaApiMain = event.detail;
@@ -30,6 +35,7 @@
             console.error('Failed to load projects: ', error)
         }
     });
+
 </script>
 
 <div class="embla-thumbs">
@@ -56,7 +62,7 @@
 <div class="embla-container">
     <div class="embla" use:emblaCarouselSvelte="{{ options, plugins }}" onemblaInit="{onMainCarouselInit}">
         <div class="embla__container">    
-            {#each projects as project}
+            {#each projects as project, idx}
                 <div class="embla__slide">
 
 
@@ -86,7 +92,12 @@
                             </div>
                         </div>
                     </section>
-
+                    <div class="accordion-btn-container">
+                        <button class="accordion-btn" onclick={() => handleAccordion(idx)}>Read more +</button>
+                    </div>
+                    <div class="panel" style:max-height={openAccordionIndex === idx ? '200px': 0}>
+                        <p>{project.expandedDescription}</p>
+                    </div>
 
                 </div>    
             {/each}
@@ -157,8 +168,8 @@
     .embla__slide {    
         flex: 0 0 100%;    
         min-width: 0;  
-        display: flex;
-        justify-content: center;
+        /* display: flex;
+        justify-content: center; */
     }
 
     .image-text-section {
@@ -236,6 +247,36 @@
                 background-color: var(--bananaYellowHover);
                 transition: 0.3s;
             }
+        }
+    }
+
+    .accordion-btn-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: var(--paddingMediumSmall)
+    }
+
+    .accordion-btn {
+        color: white;
+        background: transparent;
+        cursor: pointer;
+        padding: 18px;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+    }
+
+    .panel {
+        color: white;
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+
+        p {
+            margin: 0px;
         }
     }
 

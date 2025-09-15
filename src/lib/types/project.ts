@@ -9,4 +9,5 @@ export interface Project {
     liveUrl: string;
     technologies: string[];
     featured: boolean;
+    expandedDescription: string;
 }

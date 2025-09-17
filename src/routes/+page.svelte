@@ -57,6 +57,7 @@
         --wineRed: #CC6666;
         --limeGreen: #B5BD68;
         --maxWidth: 1100px;
+        --paddingXXL: 350px;
         --paddingXL: 128px;
         --paddingMedium: 64px;
         --paddingMediumSmall: 24px;
@@ -127,9 +128,16 @@
 
     @media(min-width: 900px){
 
-
         #projects {
-            padding: var(--paddingXL);
+            padding-right: var(--paddingXL);
+            padding-left: var(--paddingXL);
+        }
+    }
+
+    @media(min-width: 1450px){
+        #projects {
+            padding-right: var(--paddingXXL);
+            padding-left: var(--paddingXXL);
         }
     }
 

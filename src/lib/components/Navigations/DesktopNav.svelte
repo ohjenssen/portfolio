@@ -88,4 +88,14 @@
         }
     }
 
+    @media(min-width: 1450px){
+        .oskar-logo {
+            padding-left: var(--paddingXXL);
+        }
+
+        .desktop-nav {
+            padding-right: var(--paddingXXL);
+        }
+    }
+
 </style>

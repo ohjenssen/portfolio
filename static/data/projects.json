@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Bolan",
-        "description": "My final project at the Multimediadesign education. Here we chose an existing company and created a redesign of their visual identity.",
+        "description": "My final project at the Multimediadesign education. Here we chose an existing company and created a redesign of their visual identity. We chose Bolan, a pizzeria located in Amager.",
         "desktopImage": "/assets/projects/bolan/bolan.png",
         "mobileImage": "/assets/projects/bolan/bolan_mobile.png",
         "projectLogo": "assets/projects/bolan/bolan_logo.png",
@@ -10,10 +10,35 @@
         "liveUrl": "https://bolan.netlify.app",
         "technologies": ["HTML", "CSS", "JavaScript"],
         "featured": true,
-        "expandedDescription": "I was in a really good exam group with Aleksandra and Petra, and together with met with Bolan a couple of times to discuss what he wanted out of the project. The result was a visual makeover (digitally). We made a new website, graphic design and SoMe strategy. All of us in the team got to play our strengths and generally we had a good time. Also we got a 12 for our project."
+        "expandedDescription": "I was lucky to be in a really good exam group with Aleksandra and Petra. Together we with met with Bolan a couple of times to discuss what he wanted out of the project. The result was a visual makeover (digitally). We made a new website, graphic design and SoMe strategy. All of us in the team got to play our strengths and generally we had a good time. Also we got a 12 for our project."
+    },
+        {
+        "id": 2,
+        "title": "GrantOne",
+        "description": "My internship was at Grant APS. During my time there, I got to work with their application GrantOne, where I partook in designing and developing new features.",
+        "desktopImage": "/assets/projects/grantOne/screenshot_grant.PNG",
+        "mobileImage": "",
+        "projectLogo": "/assets/projects/grantOne/grant_logo_2025.svg",
+        "githubUrl": "",
+        "liveUrl": "",
+        "technologies": ["Angular", "AngularMaterial"],
+        "expandedDescription": "I got in contact with Grant through my job that I had at the time. I was lucky enough to land an internship that lasted from January to March (10 weeks). My main project there was to gather all notifications a user would get in a single interface. This involved figuring out a user-journey, designing and then developing it. It took a lot of trial and error but I was really happy with how it turned out. Unfortunately its not possible to view the GrantOne application without being a customer, and the code is of course not available to the public."
     },
     {
-        "id": 2,
+        "id": 4,
+        "title": "Watts",
+        "description": "Watts is a green tech company working with intelligent energy distribution. Here I help creating webcomponents for their online presence which includes watts.dk and shop.watts.dk",
+        "desktopImage": "/assets/projects/watts/watts_desktop.png",
+        "mobileImage": "",
+        "projectLogo": "/assets/projects/watts/watts_logo.svg",
+        "githubUrl": "",
+        "liveUrl": "https://watts.dk",
+        "technologies": ["Svelte", "Sanity Studio", "Azure"],
+        "featured": true,
+        "expandedDescription": "I have been working at Watts since April, and theres been a lot of technical updates to the code base. So alot of what I have done has actually been to update and optimize a lot existing code instead of creating something entirely new, which has been a different but challenge. Especially Sanity Studio has been fun to work with because I have learnt so much about CMS."
+    },
+    {
+        "id": 5,
         "title": "Holidaze",
         "description": "A modern booking platform built with React and styled-components. Features user authentication, property listings, and booking management.",
         "desktopImage": "/assets/projects/holidaze/holidaze_front.png",
@@ -24,17 +49,5 @@
         "technologies": ["React", "SASS", "REST API"],
         "featured": true,
         "expandedDescription": "This was the final project at the Noroff School of Digital Technology and Digital Media. The project was to create a booking application for residencies, similair to AirBNB. I had already started on my multimedia education, so there was a lot going on at the time. I remember quite well that I installed Bootstrap on the project, but couldnt quite figure out to get SASS installed so it could be customized. Therefore I thought it would be smart to take a shortcut and just try to style it directly with plain css. The result is a pretty janky styled website and serves as a reminder for me to not stress or rush into projects."
-    },
-    {
-        "id": 3,
-        "title": "GrantOne",
-        "description": "My internship was at Grant APS. During my time there, I got to work with their application GrantOne, where I partook in designing and developing new features.",
-        "desktopImage": "/assets/projects/grantOne/screenshot_grant.PNG",
-        "mobileImage": "",
-        "projectLogo": "/assets/projects/grantOne/grant_logo_2025.svg",
-        "githubUrl": "",
-        "liveUrl": "",
-        "technologies": ["Angular", "AngularMaterial"],
-        "expandedDescription": "I got in contact with Grant through my job that I had at the time. I was lucky enough to land an internship that lasted from January to March (10 weeks). My main project there was to gather all notifications a user would get in a single interface. This involved figuring out a user-journey, designing and then developing it. It took a lot of trial and error but I was really happy with how it turned out. Unfortunately its not possible to view the GrantOne application without being a customer, and the code is of course not available to the public."
     }
 ]

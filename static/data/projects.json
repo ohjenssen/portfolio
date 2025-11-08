@@ -49,5 +49,18 @@
         "technologies": ["React", "SASS", "REST API"],
         "featured": true,
         "expandedDescription": "This was the final project at the Noroff School of Digital Technology and Digital Media. The project was to create a booking application for residencies, similair to AirBNB. I had already started on my multimedia education, so there was a lot going on at the time. I remember quite well that I installed Bootstrap on the project, but couldnt quite figure out to get SASS installed so it could be customized. Therefore I thought it would be smart to take a shortcut and just try to style it directly with plain css. The result is a pretty janky styled website and serves as a reminder for me to not stress or rush into projects."
+    },
+    {
+        "id": 5,
+        "title": "ScanMaster",
+        "description": "A simple scanner application made for scanning food. It uses a free API so its a bit limited in terms of data.",
+        "desktopImage": "/assets/projects/scanMaster/scanMaster_desktop.png",
+        "mobileImage": "/assets/projects/scanMaster/scanMaster_desktop.png",
+        "projectLogo": "/assets/projects/scanMaster/ScanMaster.svg",
+        "githubUrl": "https://github.com/ohjenssen/scanMaster",
+        "liveUrl": "https://scanmaster.oskarjenssen.com",
+        "technologies": ["JavaScript", "SASS", "REST API"],
+        "featured": true,
+        "expandedDescription": "Try it out yourself, scan the barcode of a food item."
     }
 ]

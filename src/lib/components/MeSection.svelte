@@ -1,5 +1,5 @@
 <script>
-    const pictureOfMe = '/assets/Oskar_Farger_No_Background.png';
+    const pictureOfMe = '/assets/Oskar_Farger_No_Background_compressed_1.png';
     const portraitPath1 = '/assets/portrait_path_vector_1.svg';
     const portraitPath2 = '/assets/portrait_path_vector_2.svg';
 </script>

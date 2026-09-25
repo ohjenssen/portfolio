@@ -1,5 +1,18 @@
 [
     {
+        "id": 7,
+        "title": "Kehlman Mobility",
+        "description": "Kehlman Mobility is a part of the danish bicycle store Fri BikeShop. Here I developed kehlmanmobility.dk from scratch, suing Next.js, Sanity Studio and integrating Stripe API myself.",
+        "desktopImage": "/assets/projects/kehlmanmobility/kehlmanmobility_desktop.png",
+        "mobileImage": "",
+        "projectLogo": "/assets/projects/kehlmanmobility/kehlmanmobility_logo.png",
+        "githubUrl": "",
+        "liveUrl": "https://kehlmanmobility.dk",
+        "technologies": ["Next.js,", "Sanity Studio,", "Stripe API"],
+        "featured": true,
+        "expandedDescription": "I had been looking for work that was more than just writing a component for a company. Something that would let me set up an entire site and decide architectually how it should be. I found that opportunity with Kehlman Mobility and set about creating it. "
+    },
+    {
         "id": 4,
         "title": "Watts",
         "description": "Watts is a green tech company working with intelligent energy distribution. Here I help creating webcomponents for their online presence which includes watts.dk and shop.watts.dk",
@@ -14,8 +27,8 @@
     },
     {
         "id": 6,
-        "title": "Fitnessapp",
-        "description": "A fitness application to log and track your gym sets. This is stil an ongoing hobbyproject as of 20.01.2026",
+        "title": "Nutrikey",
+        "description": "A calorietrackerapp that I built for myself",
         "desktopImage": "/assets/projects/supersonicRhino/supersonicRhino_desktop.png",
         "mobileImage": "/assets/projects/supersonicRhino/supersonicRhino_desktop.png",
         "projectLogo": "/assets/projects/supersonicRhino/supersonicRhino_logo.svg",
